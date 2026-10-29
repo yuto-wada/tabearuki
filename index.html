@@ -25,7 +25,7 @@
   --paper:#f7f2e8; --card:#fffdf8; --ink:#2a2622; --muted:#6f665b; --rule:#e3d9c8;
   --noren:#263a5e; --noren-ink:#f7f2e8; --accent:#263a5e; --accent-ink:#ffffff;
   --yolk:#e9a627; --yolk-soft:#fbe8bb;
-  --hi:#3f7d4e; --mid:#a86b0c; --lo:#8b8277; --closed:#b4432f; --chip:#efe7d8;
+  --hi:#3f7d4e; --mid:#a86b0c; --lo:#8b8277; --closed:#b4432f; --chip:#efe7d8; --shu:#c23b2a;
   --f-display:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
   --f-body:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
 }
@@ -33,12 +33,12 @@
   --paper:#171a22; --card:#20242e; --ink:#f0e9dc; --muted:#ada392; --rule:#343947;
   --noren:#2b4170; --noren-ink:#f6efe2; --accent:#f2bd52; --accent-ink:#1d1a14;
   --yolk:#f2bd52; --yolk-soft:#3a3222;
-  --hi:#7ccf94; --mid:#f0b85a; --lo:#958c7f; --closed:#f08a76; --chip:#2a2f3b; color-scheme:dark}}
+  --hi:#7ccf94; --mid:#f0b85a; --lo:#958c7f; --closed:#f08a76; --chip:#2a2f3b; --shu:#ff7b66; color-scheme:dark}}
 :root[data-theme="dark"]{
   --paper:#171a22; --card:#20242e; --ink:#f0e9dc; --muted:#ada392; --rule:#343947;
   --noren:#2b4170; --noren-ink:#f6efe2; --accent:#f2bd52; --accent-ink:#1d1a14;
   --yolk:#f2bd52; --yolk-soft:#3a3222;
-  --hi:#7ccf94; --mid:#f0b85a; --lo:#958c7f; --closed:#f08a76; --chip:#2a2f3b; color-scheme:dark}
+  --hi:#7ccf94; --mid:#f0b85a; --lo:#958c7f; --closed:#f08a76; --chip:#2a2f3b; --shu:#ff7b66; color-scheme:dark}
 body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.7}
 .gut{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .inner{max-width:960px;margin:0 auto}
@@ -109,6 +109,21 @@ li.item{display:grid;grid-template-columns:5.5em minmax(0,1fr) auto;gap:4px 16px
 .k-高{color:var(--hi)} .k-中{color:var(--mid)} .k-低{color:var(--lo)}
 .s-closed{color:var(--closed)} .s-moved{color:var(--mid)} .s-open{color:var(--hi)} .s-unknown{color:var(--lo)}
 .act{display:flex;flex-direction:column;gap:6px;align-items:flex-end}
+.stamp{all:unset;box-sizing:border-box;flex:none;width:58px;height:58px;border-radius:50%;border:1.5px dashed var(--muted);color:var(--muted);display:grid;place-content:center;justify-items:center;gap:1px;cursor:pointer;font-size:11px;line-height:1.15;text-align:center;opacity:.75}
+.stamp:hover{opacity:1}
+.stamp:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.stamp[aria-pressed="true"]{border:2.5px solid var(--shu);color:var(--shu);transform:rotate(-10deg);opacity:1;background:color-mix(in srgb,var(--shu) 7%,transparent)}
+.stamp[aria-pressed="true"] .in{font-family:var(--f-display);font-weight:800;font-size:22px;line-height:1}
+.stamp .dt{font-size:10px;font-variant-numeric:tabular-nums}
+.stamp.pop{animation:pop .35s ease-out}
+@keyframes pop{0%{transform:rotate(-10deg) scale(1.6);opacity:0}100%{transform:rotate(-10deg) scale(1);opacity:1}}
+@media (prefers-reduced-motion:reduce){.stamp.pop{animation:none}}
+.prog{margin-top:14px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.prog .bar{flex:1 1 160px;max-width:280px;height:8px;border-radius:99px;background:rgba(255,255,255,.18);overflow:hidden}
+.prog .bar i{display:block;height:100%;background:var(--shu);border-radius:99px}
+.prog span{font-size:13px;font-variant-numeric:tabular-nums}
+.prog b{font-family:var(--f-display);font-size:22px;color:var(--noren-ink)}
+.menu .vc{font-size:11px;color:var(--shu);font-weight:700;border:1px solid var(--shu);border-radius:3px;padding:0 4px;transform:rotate(-4deg)}
 .map{display:inline-flex;align-items:center;gap:5px;white-space:nowrap;text-decoration:none;font-size:13px;font-weight:700;color:var(--ink);background:var(--yolk-soft);border:1px solid var(--yolk);padding:5px 13px;border-radius:999px}
 .map:hover{background:var(--yolk);color:#2a2622}
 .map svg{width:13px;height:13px;flex:none}
@@ -158,6 +173,7 @@ li.item{display:grid;grid-template-columns:5.5em minmax(0,1fr) auto;gap:4px 16px
     <p class="lede">原田ひ香さんの『ランチ酒』『喫茶おじさん』『古本食堂』などに出てくる店を、作品と章ごとにまとめました。</p>
     <p class="notice"><b>ご注意</b>『ランチ酒』『あさ酒』『喫茶おじさん』は作中で店名が伏せられているため、掲載した店は読者による特定・推定を含みます。『ランチ酒』1作目の店は、ブログ<a href="https://sutekinayokan.hatenablog.com/entry/lunchzake-matome" target="_blank" rel="noopener">「ホンダナ！」</a>の調査をもとにしています。そのほかの根拠は、各店の「出典」から確認できます。</p>
     <div class="big" id="stats"></div>
+    <div class="prog" id="prog"></div>
   </div>
 </header>
 
@@ -175,6 +191,7 @@ li.item{display:grid;grid-template-columns:5.5em minmax(0,1fr) auto;gap:4px 16px
       <input id="q" type="search" placeholder="店名・エリア・料理で検索" aria-label="検索">
       <label><input type="checkbox" id="hideClosed"> 閉店を隠す</label>
       <label><input type="checkbox" id="hideUnk"> 未特定を隠す</label>
+      <label><input type="checkbox" id="hideDone"> 行った店を隠す</label>
     </div>
   </div>
 
@@ -238,7 +255,12 @@ try{ saved = JSON.parse(localStorage.getItem('hh-filter')||'{}') }catch(e){}
 if (saved.sel && (saved.sel==="すべて"||WORKS.includes(saved.sel))) sel = saved.sel;
 if (saved.selA && (saved.selA==="すべて"||AREAS.some(a=>a[0]===saved.selA))) selA = saved.selA;
 const $ = id=>document.getElementById(id);
-$('hideClosed').checked = !!saved.hc; $('hideUnk').checked = !!saved.hu;
+$('hideClosed').checked = !!saved.hc; $('hideUnk').checked = !!saved.hu; $('hideDone').checked = !!saved.hd;
+let V={}; try{V=JSON.parse(localStorage.getItem('hh-visited')||'{}')||{}}catch(e){}
+function saveV(){try{localStorage.setItem('hh-visited',JSON.stringify(V))}catch(e){}}
+const canStamp=r=>r.q&&r.s!=='closed';
+function fmtD(d){if(!d)return'';const m=d.split('-');return (+m[1])+'/'+(+m[2])}
+function stampHTML(r){const d=V[r.q];return `<button type="button" class="stamp" data-q="${esc(r.q)}" aria-pressed="${!!d}" aria-label="${esc(r.n)}に行った">${d?`<span class="in">済</span><span class="dt">${fmtD(d)}</span>`:'<span class="in">行った<br>？</span>'}</button>`}
 
 function mapUrl(q){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q)}
 function esc(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
@@ -274,14 +296,16 @@ function closeSheet(){ $('sheet').hidden=true; document.body.style.overflow=''; 
 function stats(){
   const named=W.filter(r=>r.q).length, closed=W.filter(r=>r.s==='closed').length;
   const uniq=new Set(W.filter(r=>r.q).map(r=>r.q)).size;
+  const all=[...new Set(W.filter(canStamp).map(r=>r.q))], done=all.filter(q=>V[q]).length;
+  $('prog').innerHTML=`<span>行った店 <b>${done}</b> / ${all.length}</span><div class="bar"><i style="width:${all.length?done/all.length*100:0}%"></i></div>`;
   $('stats').innerHTML = `<div><b>${uniq}</b>店</div><div><b>${WORKS.length}</b>作品</div><div><b>${W.length}</b>場面</div>`;
   const YEAR={"ランチ酒":2017,"ランチ酒 おかわり日和":2019,"ランチ酒 今日もまんぷく":2021,"あさ酒":2024,"喫茶おじさん":2023,"古本食堂":2022,"古本食堂 新装開店":2024};
-  $('menu').innerHTML = '<li class="menu-h" aria-hidden="true">お品書き</li>'+WORKS.map(w=>{const n=W.filter(r=>r.w===w&&r.q).length;return `<li><button type="button" data-w="${esc(w)}"><span class="t">${esc(w)}</span><span class="y">${YEAR[w]||''}</span><span class="dots"></span><span class="n">${n}<small>店</small></span></button></li>`}).join('');
+  $('menu').innerHTML = '<li class="menu-h" aria-hidden="true">お品書き</li>'+WORKS.map(w=>{const n=W.filter(r=>r.w===w&&r.q).length;return `<li><button type="button" data-w="${esc(w)}"><span class="t">${esc(w)}</span><span class="y">${YEAR[w]||''}</span>${(()=>{const vc=[...new Set(W.filter(r=>r.w===w&&canStamp(r)&&V[r.q]).map(r=>r.q))].length;return vc?`<span class="vc">済${vc}</span>`:''})()}<span class="dots"></span><span class="n">${n}<small>店</small></span></button></li>`}).join('');
 }
 function render(){
-  const q=$('q').value.trim().toLowerCase(), hc=$('hideClosed').checked, hu=$('hideUnk').checked;
-  try{localStorage.setItem('hh-filter',JSON.stringify({sel,selA,hc,hu}))}catch(e){}
-  const rows=W.filter(r=>(sel==="すべて"||r.w===sel)&&(selA==="すべて"||r.g===selA)&&(!hc||r.s!=='closed')&&(!hu||r.q)&&(!q||[r.n,r.a,r.g,r.d,r.c,r.note].join(' ').toLowerCase().includes(q)));
+  const q=$('q').value.trim().toLowerCase(), hc=$('hideClosed').checked, hu=$('hideUnk').checked, hd=$('hideDone').checked;
+  try{localStorage.setItem('hh-filter',JSON.stringify({sel,selA,hc,hu,hd}))}catch(e){}
+  const rows=W.filter(r=>(sel==="すべて"||r.w===sel)&&(selA==="すべて"||r.g===selA)&&(!hc||r.s!=='closed')&&(!hu||r.q)&&(!hd||!(r.q&&V[r.q]))&&(!q||[r.n,r.a,r.g,r.d,r.c,r.note].join(' ').toLowerCase().includes(q)));
   if(!rows.length){$('out').innerHTML='<p class="empty">条件に合う店はありません。検索語や絞り込みを変えてください。</p>';return}
   const groups=WORKS.filter(w=>rows.some(r=>r.w===w));
   $('out').innerHTML = groups.map(w=>{
@@ -295,7 +319,7 @@ function render(){
           ${r.note?`<div class="note">${esc(r.note)}</div>`:''}
           <div class="tags">${r.k?`<span class="tag k-${r.k}">確度 ${r.k}</span>`:''}${r.s&&r.s!=='unknown'?`<span class="tag ${SCLS[r.s]}">${S[r.s]}</span>`:''}</div>
         </div>
-        <div class="act">${r.q?`<a class="map" href="${mapUrl(r.q)}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>地図・写真・口コミ</a>`:'<span class="nomap">地図なし</span>'}${r.src?`<a class="src" href="${esc(r.src)}" target="_blank" rel="noopener">出典</a>`:''}</div>
+        <div class="act">${canStamp(r)?stampHTML(r):''}${r.q?`<a class="map" href="${mapUrl(r.q)}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>地図・写真・口コミ</a>`:'<span class="nomap">地図なし</span>'}${r.src?`<a class="src" href="${esc(r.src)}" target="_blank" rel="noopener">出典</a>`:''}</div>
       </li>`).join('')}</ol></section>`
   }).join('');
 }
@@ -311,7 +335,18 @@ $('sheet').addEventListener('click',e=>{
   document.querySelector('.controls').scrollIntoView({block:'start'});
 });
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('sheet').hidden)closeSheet()});
-['q','hideClosed','hideUnk'].forEach(id=>$(id).addEventListener('input',render));
+$('out').addEventListener('click',e=>{
+  const b=e.target.closest('.stamp'); if(!b) return;
+  const q=b.dataset.q;
+  if(V[q]) delete V[q]; else { const t=new Date(); V[q]=t.getFullYear()+'-'+(t.getMonth()+1)+'-'+t.getDate(); }
+  saveV();
+  const r=W.find(x=>x.q===q);
+  document.querySelectorAll('.stamp').forEach(s=>{ if(s.dataset.q===q){ s.outerHTML=stampHTML(r); } });
+  if(V[q]){ document.querySelectorAll('.stamp').forEach(s=>{ if(s.dataset.q===q){ s.classList.add('pop'); } }); }
+  const f=[...document.querySelectorAll('.stamp')].find(s=>s.dataset.q===q); if(f) f.focus({preventScroll:true});
+  stats();
+});
+['q','hideClosed','hideUnk','hideDone'].forEach(id=>$(id).addEventListener('input',render));
 $('nofound').textContent = "三人屋／サンドの女／図書館のお夜食／三千円の使いかた／財布は踊る／口福のレシピ／まずはこれ食べて／定食屋「雑」／東京ロンダリング／一橋桐子の犯罪日記・相談日記／老人ホテル／月収／#台所のあるところ／母親からの小包はなぜこんなにダサいのか／そのマンション、終の住処でいいですか？／ラジオ・ガガガ／DRY／彼女の家計簿／ミチルさん、今日も上機嫌 ほか。いずれも架空の店のみか、店名の分かる記述が見つかりませんでした（読書ブログ・書評・インタビューの範囲で確認）。";
 $('menu').addEventListener('click',e=>{const b=e.target.closest('button[data-w]');if(!b)return;sel=b.dataset.w;chips();render();document.querySelector('.controls').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})});
 const ctrl=document.querySelector('.controls');
