@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>原田ひ香さん作品の食べ歩き帳</title>
+<meta name="description" content="原田ひ香さんの小説に登場する店を、作品・章・エリアごとにまとめた食べ歩き帳。">
+<meta name="theme-color" content="#263a5e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="食べ歩き帳">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:title" content="原田ひ香さん作品の食べ歩き帳">
+<meta property="og:description" content="『ランチ酒』『喫茶おじさん』『古本食堂』などに出てくる店を、作品・章・エリアごとにまとめました。">
+<meta property="og:image" content="icon-512.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<style>:root{color-scheme:light;padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;-webkit-text-size-adjust:100%}*,*::before,*::after{box-sizing:border-box}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Zen+Maru+Gothic:wght@400;500;700&display=swap">
+<style>
+/* Layout: 藍ののれんをくぐると、定食屋のお品書きと、料理が主役の一行ずつの帳面 */
+:root{
+  --paper:#f7f2e8; --card:#fffdf8; --ink:#2a2622; --muted:#6f665b; --rule:#e3d9c8;
+  --noren:#263a5e; --noren-ink:#f7f2e8; --accent:#263a5e; --accent-ink:#ffffff;
+  --yolk:#e9a627; --yolk-soft:#fbe8bb;
+  --hi:#3f7d4e; --mid:#a86b0c; --lo:#8b8277; --closed:#b4432f; --chip:#efe7d8;
+  --f-display:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --f-body:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#171a22; --card:#20242e; --ink:#f0e9dc; --muted:#ada392; --rule:#343947;
+  --noren:#2b4170; --noren-ink:#f6efe2; --accent:#f2bd52; --accent-ink:#1d1a14;
+  --yolk:#f2bd52; --yolk-soft:#3a3222;
+  --hi:#7ccf94; --mid:#f0b85a; --lo:#958c7f; --closed:#f08a76; --chip:#2a2f3b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#171a22; --card:#20242e; --ink:#f0e9dc; --muted:#ada392; --rule:#343947;
+  --noren:#2b4170; --noren-ink:#f6efe2; --accent:#f2bd52; --accent-ink:#1d1a14;
+  --yolk:#f2bd52; --yolk-soft:#3a3222;
+  --hi:#7ccf94; --mid:#f0b85a; --lo:#958c7f; --closed:#f08a76; --chip:#2a2f3b; color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.7}
+.gut{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.inner{max-width:960px;margin:0 auto}
+.wrap{max-width:960px;margin:0 auto;padding-block:8px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* のれん */
+.noren{position:relative;background:var(--noren);color:var(--noren-ink);padding-block:36px 64px}
+.noren::after{content:"";position:absolute;left:0;right:0;bottom:0;height:40px;
+  background:linear-gradient(90deg,transparent calc(33.33% - 3px),var(--paper) calc(33.33% - 3px) calc(33.33% + 3px),transparent calc(33.33% + 3px) calc(66.66% - 3px),var(--paper) calc(66.66% - 3px) calc(66.66% + 3px),transparent calc(66.66% + 3px))}
+.noren::before{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--paper)}
+.eyebrow{font-size:13px;letter-spacing:.14em;margin:0 0 10px;opacity:.85}
+.eyebrow span{border-bottom:2px solid var(--yolk);padding-bottom:2px}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(32px,6vw,52px);line-height:1.15;margin:0;letter-spacing:.04em;text-wrap:balance}
+.lede{margin:12px 0 0;max-width:40em;opacity:.9}
+.notice{margin:16px 0 0;max-width:40em;font-size:13px;line-height:1.7;padding:10px 14px;border:1px solid rgba(255,255,255,.28);border-left:3px solid var(--yolk);border-radius:4px}
+.notice b{display:block;font-size:12px;letter-spacing:.1em;color:var(--yolk);margin-bottom:2px}
+.notice a{color:var(--noren-ink);text-decoration:underline;text-decoration-color:var(--yolk);text-underline-offset:3px}
+.big{display:flex;flex-wrap:wrap;gap:4px 26px;margin-top:22px;font-variant-numeric:tabular-nums}
+.big div{display:flex;align-items:baseline;gap:4px;font-size:13px;opacity:.9}
+.big b{font-family:var(--f-display);font-weight:800;font-size:38px;line-height:1;color:var(--yolk)}
+
+/* お品書き */
+.menu{list-style:none;margin:8px 0 0;padding:16px 20px 10px;background:var(--card);border:1px solid var(--rule);border-radius:3px;columns:2 18em;column-gap:40px}
+.menu-h{font-family:var(--f-display);font-size:14px;letter-spacing:.4em;color:var(--muted);text-align:center;margin:0 0 6px;column-span:all}
+.menu li{break-inside:avoid}
+.menu li button{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:baseline;gap:8px;padding:8px 0;cursor:pointer;font-size:14.5px;border-top:1px dashed var(--rule)}
+.menu .t{font-weight:700}
+.menu .y{font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.menu .dots{flex:1;border-bottom:1px dotted var(--muted);opacity:.6;transform:translateY(-4px);min-width:12px}
+.menu .n{font-family:var(--f-display);font-weight:800;font-size:19px;font-variant-numeric:tabular-nums}
+.menu .n small{font-family:var(--f-body);font-weight:400;font-size:11px;color:var(--muted);margin-left:2px}
+.menu li button:hover .t,.menu li button:focus-visible .t{color:var(--accent);text-decoration:underline}
+.menu li button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* 絞り込み */
+.controls{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);padding:14px 0 10px;margin-top:20px;border-bottom:1px solid var(--rule);display:grid;gap:10px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:inherit;font-size:13px;border:1px solid var(--rule);background:var(--chip);color:var(--ink);border-radius:999px;padding:4px 12px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.chip:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.facet{display:grid;grid-template-columns:3em minmax(0,1fr);gap:8px;align-items:start}
+.flabel{font-size:12px;color:var(--muted);letter-spacing:.08em;padding-top:6px}
+.areas .chip{font-size:12.5px;padding:3px 10px}
+.chip .c{opacity:.7;font-variant-numeric:tabular-nums}
+.row2{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+#q{flex:1 1 220px;min-width:0;font:inherit;padding:8px 12px;border:1px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink)}
+.row2 label{font-size:13px;color:var(--muted);display:flex;gap:6px;align-items:center}
+input[type=checkbox]{accent-color:var(--accent)}
+
+/* 一覧 */
+section.work{margin-top:30px}
+section.work h2{position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--ctrl-h,0px));z-index:4;background:var(--paper);padding:8px 0 4px;font-family:var(--f-display);font-weight:800;font-size:23px;margin:0 0 2px;display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline}
+section.work h2 small{font-family:var(--f-body);font-size:12px;color:var(--muted);font-weight:400}
+.worknote{color:var(--muted);font-size:13px;margin:0 0 10px;max-width:70ch}
+ol.list{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+li.item{display:grid;grid-template-columns:5.5em minmax(0,1fr) auto;gap:4px 16px;padding:14px 0;border-bottom:1px dashed var(--rule);align-items:start}
+.ch{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:5px}
+.main{min-width:0}
+.dish{font-family:var(--f-display);font-weight:600;font-size:18.5px;line-height:1.45}
+.shop{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px;margin-top:3px}
+.area{font-size:12px;font-weight:700;color:var(--noren-ink);background:var(--noren);border-radius:3px;padding:0 7px;letter-spacing:.03em}
+.name{font-weight:700;font-size:15px}
+.name.unk{font-weight:400;color:var(--muted)}
+.note{font-size:12.5px;color:var(--muted);margin-top:3px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.tag{font-size:11.5px;border-radius:4px;padding:0 7px;border:1px solid currentColor;letter-spacing:.02em}
+.k-高{color:var(--hi)} .k-中{color:var(--mid)} .k-低{color:var(--lo)}
+.s-closed{color:var(--closed)} .s-moved{color:var(--mid)} .s-open{color:var(--hi)} .s-unknown{color:var(--lo)}
+.act{display:flex;flex-direction:column;gap:6px;align-items:flex-end}
+.map{display:inline-flex;align-items:center;gap:5px;white-space:nowrap;text-decoration:none;font-size:13px;font-weight:700;color:var(--ink);background:var(--yolk-soft);border:1px solid var(--yolk);padding:5px 13px;border-radius:999px}
+.map:hover{background:var(--yolk);color:#2a2622}
+.map svg{width:13px;height:13px;flex:none}
+.src{font-size:12px;color:var(--muted)}
+.nomap{font-size:12px;color:var(--muted)}
+.empty{color:var(--muted);padding:24px 0}
+.foot{margin-top:44px;color:var(--muted);font-size:13px;max-width:70ch}
+.foot h3{font-family:var(--f-display);font-size:16px;color:var(--ink);margin:0 0 6px}
+@media (max-width:560px){
+  .noren{padding-block:28px 56px}
+  li.item{grid-template-columns:1fr}.act{flex-direction:row;align-items:center}.ch{padding-top:0}
+  .controls{padding:8px 0 8px;gap:8px;margin-top:14px}
+  .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin-right:calc(-1 * max(16px,env(safe-area-inset-right,0px)));padding-right:16px}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex:none}
+  #q{flex-basis:100%;padding:7px 10px}
+  .row2{gap:6px 16px}
+  .menu{padding:12px 16px 6px}
+}
+.pickers{display:none}
+.pk{font:inherit;display:flex;align-items:center;gap:6px;width:100%;min-width:0;padding:9px 12px;border:1px solid var(--rule);border-radius:10px;background:var(--card);color:var(--ink);cursor:pointer;text-align:left}
+.pk .pl{font-size:11px;color:var(--muted);flex:none}
+.pk .pv{font-weight:700;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pk .ar{flex:none;color:var(--muted);font-size:12px}
+.pk.on{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.pk:focus-visible,.opt:focus-visible,.sheet-x:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.sheet{position:fixed;inset:0;z-index:20}
+.sheet-bg{position:absolute;inset:0;background:rgba(10,12,20,.45)}
+.sheet-panel{position:absolute;left:0;right:0;bottom:0;max-height:82%;overflow:auto;background:var(--paper);border-radius:16px 16px 0 0;padding-top:14px;padding-bottom:calc(18px + env(safe-area-inset-bottom,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.sheet-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.sheet-h h3{font-family:var(--f-display);font-size:19px;margin:0}
+.sheet-x{font:inherit;font-size:14px;border:0;background:var(--chip);color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
+.sheet-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.opt{font:inherit;display:flex;justify-content:space-between;align-items:center;gap:8px;min-height:54px;padding:10px 12px;text-align:left;border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:10px;cursor:pointer;font-size:14px;line-height:1.35}
+.opt b{font-family:var(--f-display);font-size:18px;font-variant-numeric:tabular-nums;flex:none}
+.opt[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+@media (max-width:560px){.controls .facet{display:none}.pickers{display:grid;grid-template-columns:1fr 1fr;gap:8px}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+
+</head>
+<body>
+<header class="noren gut">
+  <div class="inner">
+    <p class="eyebrow"><span>小説の中の店を、地図で歩く</span></p>
+    <h1>原田ひ香さん作品の<br>食べ歩き帳</h1>
+    <p class="lede">原田ひ香さんの『ランチ酒』『喫茶おじさん』『古本食堂』などに出てくる店を、作品と章ごとにまとめました。</p>
+    <p class="notice"><b>ご注意</b>『ランチ酒』『あさ酒』『喫茶おじさん』は作中で店名が伏せられているため、掲載した店は読者による特定・推定を含みます。『ランチ酒』1作目の店は、ブログ<a href="https://sutekinayokan.hatenablog.com/entry/lunchzake-matome" target="_blank" rel="noopener">「ホンダナ！」</a>の調査をもとにしています。そのほかの根拠は、各店の「出典」から確認できます。</p>
+    <div class="big" id="stats"></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <ul class="menu" id="menu" aria-label="作品ごとの店数"></ul>
+
+  <div class="controls">
+    <div class="pickers">
+      <button type="button" class="pk" id="pkW" aria-haspopup="dialog"><span class="pl">作品</span><span class="pv" id="pvW">すべて</span><span class="ar" aria-hidden="true">▼</span></button>
+      <button type="button" class="pk" id="pkA" aria-haspopup="dialog"><span class="pl">エリア</span><span class="pv" id="pvA">すべて</span><span class="ar" aria-hidden="true">▼</span></button>
+    </div>
+    <div class="facet"><span class="flabel">作品</span><div class="chips" id="chips" role="group" aria-label="作品で絞り込む"></div></div>
+    <div class="facet"><span class="flabel">エリア</span><div class="chips areas" id="areas" role="group" aria-label="エリアで絞り込む"></div></div>
+    <div class="row2">
+      <input id="q" type="search" placeholder="店名・エリア・料理で検索" aria-label="検索">
+      <label><input type="checkbox" id="hideClosed"> 閉店を隠す</label>
+      <label><input type="checkbox" id="hideUnk"> 未特定を隠す</label>
+    </div>
+  </div>
+
+  <main id="out"></main>
+
+  <div class="sheet" id="sheet" hidden>
+    <div class="sheet-bg" data-close></div>
+    <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="sheetT">
+      <div class="sheet-h"><h3 id="sheetT">作品を選ぶ</h3><button type="button" class="sheet-x" data-close>閉じる</button></div>
+      <div class="sheet-grid" id="sheetGrid"></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <h3>実在店が見つからなかった作品</h3>
+    <p id="nofound"></p>
+    <h3>確度の見方</h3>
+    <p>高＝作中に実名が出る、原田さんが言及、または複数の読者の特定が一致。中＝読者1人の特定、または描写と名物が強く一致。低＝描写からの推定。営業状況は2026年10月時点で確認できた範囲の情報です。</p>
+  </div>
+</div>
+
+<script id="data" type="application/json">[{"w": "ランチ酒", "c": "第1酒", "a": "武蔵小山", "d": "肉丼・芋焼酎", "n": "くいしんぼう がぶ", "q": "がぶ 武蔵小山 目黒本町", "k": "高", "s": "unknown", "src": "https://sutekinayokan.hatenablog.com/entry/lunchzake-matome", "note": ""}, {"w": "ランチ酒", "c": "第2酒", "a": "中目黒", "d": "ラムチーズバーガー", "n": "THE BURGER VOWS", "q": "THE BURGER VOWS 中目黒", "k": "高", "s": "unknown", "src": "https://sutekinayokan.hatenablog.com/entry/lunchzake-matome", "note": ""}, {"w": "ランチ酒", "c": "第3酒", "a": "丸の内", "d": "回転寿司", "n": "回転寿司 根室花まる KITTE丸の内店", "q": "根室花まる KITTE丸の内店", "k": "高", "s": "open", "src": "https://sutekinayokan.hatenablog.com/entry/lunchzake-matome", "note": ""}, {"w": "ランチ酒", "c": "第4酒", "a": "中野", "d": "焼き魚定食", "n": "陸蒸気 中野店", "q": "陸蒸気 中野", "k": "高", "s": "unknown", "src": "https://sutekinayokan.hatenablog.com/entry/lunchzake-matome", "note": ""}, {"w": "ランチ酒", "c": "第5酒", "a": "大阪・阿倍野", "d": "刺身定食", "n": "スタンドふじ（ルシアスビル）", "q": "スタンドふじ 阿倍野", "k": "中", "s": "unknown", "src": "https://sutekinayokan.hatenablog.com/entry/lunchzake-matome", "note": ""}, {"w": "ランチ酒", "c": "第6酒", "a": "御茶ノ水", "d": "牛タン", "n": "牛たん ねぎし 御茶ノ水店", "q": "ねぎし 御茶ノ水店", "k": "中", "s": "unknown", "src": "https://sutekinayokan.hatenablog.com/entry/lunchzake-matome", "note": ""}, {"w": "ランチ酒", "c": "第7酒", "a": "新宿", "d": "ソーセージ＆クラウト", "n": "ベルク（新宿駅東口）", "q": "BERG ベルク 新宿", "k": "高", "s": "open", "src": "https://shosetsu-maru.com/interviews/authors/quilala_pickup/113", "note": ""}, {"w": "ランチ酒", "c": "第8酒", "a": "十条", "d": "肉骨茶（バクテー）", "n": "肉骨茶（バクテー）十条", "q": "肉骨茶 バクテー 十条", "k": "高", "s": "unknown", "src": "https://ddnavi.com/article/1273629/a/", "note": "漫画版の作画担当も十条の肉骨茶に言及"}, {"w": "ランチ酒", "c": "第9酒", "a": "新丸子", "d": "サイコロステーキ", "n": "ミート＆ワイン バンブゥ", "q": "バンブゥ 新丸子", "k": "中", "s": "unknown", "src": "https://sutekinayokan.hatenablog.com/entry/lunchzake-matome", "note": ""}, {"w": "ランチ酒", "c": "第10酒", "a": "秋葉原", "d": "からあげ丼", "n": "ハイブリッド酒場", "q": "", "k": "中", "s": "closed", "src": "https://sutekinayokan.hatenablog.com/entry/lunchzake-matome", "note": "中野へ移転後、2019年5月閉店"}, {"w": "ランチ酒", "c": "第11酒", "a": "新丸子", "d": "アジフライ", "n": "三ちゃん食堂", "q": "三ちゃん食堂 新丸子", "k": "中", "s": "unknown", "src": "https://sutekinayokan.hatenablog.com/entry/lunchzake-matome", "note": ""}, {"w": "ランチ酒", "c": "第12酒", "a": "代官山", "d": "フレンチ", "n": "メゾン・ド・スリジェ", "q": "メゾンドスリジェ 代官山", "k": "中", "s": "unknown", "src": "https://sutekinayokan.hatenablog.com/entry/lunchzake-matome", "note": ""}, {"w": "ランチ酒", "c": "第13酒", "a": "南房総", "d": "海鮮丼", "n": "網納屋（道の駅 富楽里とみやま）", "q": "網納屋 富楽里とみやま", "k": "中", "s": "unknown", "src": "https://sutekinayokan.hatenablog.com/entry/lunchzake-matome", "note": ""}, {"w": "ランチ酒", "c": "第14酒", "a": "不動前", "d": "うな重", "n": "八ツ目や にしむら", "q": "八ツ目やにしむら 不動前", "k": "中", "s": "unknown", "src": "https://sutekinayokan.hatenablog.com/entry/lunchzake-matome", "note": ""}, {"w": "ランチ酒", "c": "第15酒", "a": "秋葉原", "d": "とんかつ茶づけ", "n": "新宿すずや 秋葉原店", "q": "すずや 秋葉原店", "k": "中", "s": "unknown", "src": "https://sutekinayokan.hatenablog.com/entry/lunchzake-matome", "note": ""}, {"w": "ランチ酒", "c": "第16酒", "a": "中野坂上", "d": "オムライス", "n": "中華料理 新華楼", "q": "新華楼 中野坂上", "k": "低", "s": "unknown", "src": "https://sutekinayokan.hatenablog.com/entry/lunchzake-matome", "note": "特定したブログ自身が確証なしと明記"}, {"w": "ランチ酒 おかわり日和", "c": "第1酒", "a": "表参道", "d": "焼き鳥丼", "n": "南青山 鳥政", "q": "鳥政 表参道 南青山", "k": "中", "s": "open", "src": "https://ameblo.jp/komagomekomame/entry-12762075908.html", "note": ""}, {"w": "ランチ酒 おかわり日和", "c": "第2酒", "a": "秋葉原", "d": "角煮かつ丼", "n": "炉端バル さま田", "q": "炉端バル さま田 秋葉原", "k": "中", "s": "unknown", "src": "https://ameblo.jp/komagomekomame/entry-12762075908.html", "note": ""}, {"w": "ランチ酒 おかわり日和", "c": "第3酒", "a": "日暮里", "d": "スパゲッティーグラタン", "n": "談話室ニュートーキョー", "q": "談話室ニュートーキョー 日暮里", "k": "中", "s": "unknown", "src": "https://ameblo.jp/komagomekomame/entry-12762075908.html", "note": ""}, {"w": "ランチ酒 おかわり日和", "c": "第4酒", "a": "御殿場", "d": "げんこつハンバーグ", "n": "炭焼きレストランさわやか 御殿場インター店", "q": "さわやか 御殿場インター店", "k": "中", "s": "open", "src": "https://ameblo.jp/komagomekomame/entry-12762075908.html", "note": "支店は推定"}, {"w": "ランチ酒 おかわり日和", "c": "第5酒", "a": "池袋", "d": "焼き小籠包", "n": "永祥生煎館", "q": "永祥生煎館 池袋", "k": "中", "s": "unknown", "src": "https://ameblo.jp/komagomekomame/entry-12762075908.html", "note": "ブログは北口と記載。西口店もあり"}, {"w": "ランチ酒 おかわり日和", "c": "第5酒", "a": "築地→豊洲", "d": "水炊きそば", "n": "鳥めし 鳥藤", "q": "鳥藤 豊洲市場", "k": "中", "s": "moved", "src": "https://ameblo.jp/komagomekomame/entry-12762075908.html", "note": "作中は築地場内店。豊洲市場へ移転し営業"}, {"w": "ランチ酒 おかわり日和", "c": "第5酒", "a": "池袋", "d": "立ち食い寿司（スペシャルB）", "n": "未特定（候補：立喰 美登利 エチカ池袋店／さくら寿司）", "q": "", "k": "低", "s": "", "src": "https://otonano-shumatsu.com/articles/506146", "note": "「スペシャルB」の名がどの店にも見つからず"}, {"w": "ランチ酒 おかわり日和", "c": "第5酒", "a": "築地場内", "d": "アイスミルクセーキ", "n": "珈琲の店 愛養", "q": "", "k": "中", "s": "closed", "src": "https://namalog.jeez.jp/namalog/aiyo-tsukiji-market/", "note": "ミルクセーキが名物。築地場内店は閉店"}, {"w": "ランチ酒 おかわり日和", "c": "第6酒", "a": "神保町", "d": "ジャーマンセルフサンド", "n": "BEER膳 放心亭（三省堂書店地下）", "q": "", "k": "中", "s": "closed", "src": "https://note.com/fe1955/n/nb68f7886f4d2", "note": ""}, {"w": "ランチ酒 おかわり日和", "c": "第7酒", "a": "中目黒", "d": "牛切り落としランチ", "n": "叙々苑 中目黒店", "q": "叙々苑 中目黒店", "k": "中", "s": "unknown", "src": "https://ameblo.jp/komagomekomame/entry-12762075908.html", "note": ""}, {"w": "ランチ酒 おかわり日和", "c": "第8酒", "a": "中野", "d": "からあげ丼", "n": "ハイブリッド酒場 中野店", "q": "", "k": "中", "s": "closed", "src": "https://ameblo.jp/komagomekomame/entry-12762075908.html", "note": "2019年5月閉店"}, {"w": "ランチ酒 おかわり日和", "c": "第9酒", "a": "渋谷", "d": "ピスタチオとプラリネのパフェ", "n": "夜パフェ専門店 パフェテリア ベル", "q": "パフェテリア ベル 渋谷", "k": "中", "s": "unknown", "src": "https://ameblo.jp/komagomekomame/entry-12762075908.html", "note": ""}, {"w": "ランチ酒 おかわり日和", "c": "第9酒", "a": "渋谷", "d": "豚骨ラーメン", "n": "博多天神 渋谷", "q": "博多天神 渋谷", "k": "中", "s": "open", "src": "https://ameblo.jp/komagomekomame/entry-12762075908.html", "note": "渋谷の何店目かは未特定"}, {"w": "ランチ酒 おかわり日和", "c": "第10酒", "a": "豊洲市場", "d": "おまかせ握り・菊姫", "n": "寿し処 勢", "q": "寿し処 勢 豊洲市場", "k": "中", "s": "open", "src": "https://ameblo.jp/miura1954/entry-12942003192.html", "note": "豊洲で菊姫を置く寿司店として確認できたのはここのみ"}, {"w": "ランチ酒 今日もまんぷく", "c": "第1酒", "a": "蒲田", "d": "羽根つき餃子・エビチリ玉子丼", "n": "中国料理 歓迎 本店", "q": "歓迎 本店 蒲田 餃子", "k": "中", "s": "open", "src": "https://www.coffret-web.jp/lunchsake-3/1/", "note": "連載本文の「大田区役所の近く」「羽根つき餃子の元祖」と一致"}, {"w": "ランチ酒 今日もまんぷく", "c": "第2酒", "a": "西麻布", "d": "フレンチ（リンゴのパイ）", "n": "未特定", "q": "", "k": "", "s": "", "src": "https://note.com/oisii115/n/na15d388ed2c7", "note": "デザートが一致する店は見つからず"}, {"w": "ランチ酒 今日もまんぷく", "c": "第3酒", "a": "新大久保", "d": "サムギョプサル", "n": "未特定", "q": "", "k": "", "s": "", "src": "https://note.com/oisii115/n/na15d388ed2c7", "note": "付け合わせ（厚揚げ、マカロニサラダ等）と一致する店は特定できず"}, {"w": "ランチ酒 今日もまんぷく", "c": "第4酒", "a": "稲荷町", "d": "ラムのビリヤニ", "n": "ハリマ・ケバブ・ビリヤニ", "q": "ハリマ・ケバブ・ビリヤニ 稲荷町", "k": "高", "s": "nodrink", "src": "https://note.com/chizukowood/n/n4efeb48fc643", "note": "現在はハラル専門でアルコールなし"}, {"w": "ランチ酒 今日もまんぷく", "c": "第5酒", "a": "新宿御苑前", "d": "タイ料理", "n": "未特定", "q": "", "k": "", "s": "", "src": "", "note": "作中の描写を確認できず"}, {"w": "ランチ酒 今日もまんぷく", "c": "第6酒", "a": "五反田", "d": "朝食ビュッフェ（生ハムのオムレツ）", "n": "三井ガーデンホテル五反田 タント タント ザ ガーデンズ", "q": "三井ガーデンホテル五反田 タントタント", "k": "中", "s": "open", "src": "https://www.gardenhotels.co.jp/gotanda/breakfast/", "note": "生ハムかトリュフを選ぶオムレツ、ラザニアが公式の朝食内容と一致"}, {"w": "ランチ酒 今日もまんぷく", "c": "第7酒", "a": "五反田", "d": "ハンバーグ", "n": "未特定（候補：ミート矢澤）", "q": "ミート矢澤 五反田", "k": "低", "s": "open", "src": "", "note": "描写を確認できず、有名店からの推定のみ"}, {"w": "ランチ酒 今日もまんぷく", "c": "第8酒", "a": "池尻大橋", "d": "よだれ鶏", "n": "未特定（候補：JASMINE 憶江南）", "q": "", "k": "低", "s": "closed", "src": "https://tabelog.com/matome/14257/", "note": "よだれ鶏が名物の一軒家中華。閉店"}, {"w": "ランチ酒 今日もまんぷく", "c": "第9酒", "a": "銀座一丁目", "d": "広島風お好み焼き・レモン酎ハイ", "n": "広島お好み焼 鯉々（ひろしまブランドショップTAU）", "q": "鯉々 銀座 TAU", "k": "中", "s": "open", "src": "https://memotyou.exblog.jp/35287603", "note": ""}, {"w": "ランチ酒 今日もまんぷく", "c": "第10酒", "a": "高円寺", "d": "天ぷら・揚げ玉子丼", "n": "天すけ", "q": "天すけ 高円寺", "k": "高", "s": "open", "src": "https://ameblo.jp/masamiskw/entry-12909808945.html", "note": ""}, {"w": "ランチ酒 今日もまんぷく", "c": "第11酒", "a": "秩父", "d": "蕎麦・わらじカツ", "n": "未特定", "q": "", "k": "", "s": "", "src": "https://honto.jp/ebook/pd-review_0631051156.html", "note": "候補店が多く絞り込めず"}, {"w": "ランチ酒 今日もまんぷく", "c": "第12酒", "a": "荻窪", "d": "ザンギ", "n": "未特定（候補：なるとキッチン 荻窪店）", "q": "なるとキッチン 荻窪", "k": "低", "s": "unknown", "src": "https://ssl.tabelog.com/en/tokyo/A1319/A131906/13230467/", "note": "荻窪でザンギが看板の店がほぼここだけ、という推定"}, {"w": "ランチ酒 今日もまんぷく", "c": "第13酒", "a": "広島", "d": "ビールの注ぎ分け飲み比べ", "n": "ビールスタンド重富 ekie店", "q": "ビールスタンド重富 ekie", "k": "中", "s": "open", "src": "https://ameblo.jp/masamiskw/entry-12909808945.html", "note": "本店（金山町）の可能性も"}, {"w": "ランチ酒 今日もまんぷく", "c": "第13酒", "a": "広島", "d": "お好み焼き・ウニクレソン", "n": "ひろしま丸かじり 中ちゃん", "q": "ひろしま丸かじり 中ちゃん", "k": "中", "s": "open", "src": "https://tabelog.com/hiroshima/A3401/A340110/34004408/dtlrvwlst/B491181317/", "note": "夜のみ営業"}, {"w": "ランチ酒 今日もまんぷく", "c": "第14酒", "a": "六本木", "d": "イタリアン", "n": "未特定", "q": "", "k": "", "s": "", "src": "", "note": "手がかりなし"}, {"w": "ランチ酒 今日もまんぷく", "c": "第15酒", "a": "新橋", "d": "鰤しらす丼・クリームコロッケ", "n": "魚金 本店", "q": "魚金 本店 新橋", "k": "中", "s": "open", "src": "https://ameblo.jp/takemasa2323/entry-12633927683.html", "note": "定食の構成が一致。現在は平日15時開店でランチの有無は未確認"}, {"w": "ランチ酒 今日もまんぷく", "c": "第16酒", "a": "末広町", "d": "白いオムライス・白ワイン", "n": "Delizioso 0141", "q": "Delizioso 0141 末広町", "k": "中", "s": "open", "src": "https://retty.me/restaurant/100001544806/", "note": "真っ白なオムライスが名物。原田さんもXで「真っ白なオムライス」に言及"}, {"w": "あさ酒", "c": "第1酒", "a": "新宿", "d": "モーニング・黒ビール", "n": "ベルク（新宿駅東口）", "q": "BERG ベルク 新宿", "k": "高", "s": "open", "src": "https://booklive.jp/review/list/title_id/20102765/vol_no/001", "note": ""}, {"w": "あさ酒", "c": "第2酒", "a": "日本橋", "d": "インドカレー", "n": "よもだそば 日本橋店", "q": "よもだそば 日本橋店", "k": "高", "s": "unknown", "src": "https://booklive.jp/review/list/title_id/20102765/vol_no/001", "note": ""}, {"w": "あさ酒", "c": "第3酒", "a": "南池袋", "d": "ハンバーグ", "n": "びっくりドンキー 南池袋店", "q": "びっくりドンキー 南池袋", "k": "高", "s": "unknown", "src": "https://booklive.jp/review/list/title_id/20102765/vol_no/001", "note": "支店名は未確認"}, {"w": "あさ酒", "c": "第4酒", "a": "新橋", "d": "五目焼き餃子・ニラ水餃子", "n": "餃子や（ニュー新橋ビルB1）", "q": "餃子や ニュー新橋ビル", "k": "高", "s": "open", "src": "https://2201na.exblog.jp/36634488", "note": ""}, {"w": "あさ酒", "c": "第5酒", "a": "目黒", "d": "生ハム食べ放題のモーニング", "n": "バルマルシェコダマ（アトレ目黒）", "q": "バルマルシェコダマ アトレ目黒", "k": "中", "s": "unknown", "src": "https://booklive.jp/review/list/title_id/20102765/vol_no/001", "note": ""}, {"w": "あさ酒", "c": "第6酒", "a": "恵比寿", "d": "中華", "n": "中華茶房8 恵比寿", "q": "中華茶房8 恵比寿", "k": "中", "s": "unknown", "src": "https://booklive.jp/review/list/title_id/20102765/vol_no/001", "note": ""}, {"w": "あさ酒", "c": "第7酒", "a": "赤坂", "d": "ソルロンタン", "n": "一龍 別館", "q": "一龍 別館 赤坂", "k": "高", "s": "unknown", "src": "https://booklive.jp/review/list/title_id/20102765/vol_no/001", "note": ""}, {"w": "あさ酒", "c": "第8酒", "a": "渋谷", "d": "焼きそば", "n": "兆楽 渋谷", "q": "兆楽 渋谷", "k": "中", "s": "unknown", "src": "https://booklive.jp/review/list/title_id/20102765/vol_no/001", "note": "道玄坂店か宇田川町店かは未確定"}, {"w": "あさ酒", "c": "第9酒", "a": "広尾", "d": "チーズバーガー", "n": "mosh Grab'nGo", "q": "mosh Grab'nGo 南麻布", "k": "中", "s": "unknown", "src": "https://booklive.jp/review/list/title_id/20102765/vol_no/001", "note": ""}, {"w": "あさ酒", "c": "第10酒", "a": "浜松町", "d": "焼鯖定食", "n": "まぐろ一代 浜松町", "q": "まぐろ一代 浜松町", "k": "中", "s": "unknown", "src": "https://booklive.jp/review/list/title_id/20102765/vol_no/001", "note": ""}, {"w": "あさ酒", "c": "第11酒", "a": "初台", "d": "オムライス", "n": "山形屋食堂", "q": "山形屋食堂 初台", "k": "中", "s": "unknown", "src": "https://booklive.jp/review/list/title_id/20102765/vol_no/001", "note": ""}, {"w": "あさ酒", "c": "第12酒", "a": "稲荷町", "d": "蕎麦", "n": "そば助", "q": "そば助 稲荷町", "k": "中", "s": "unknown", "src": "https://booklive.jp/review/list/title_id/20102765/vol_no/001", "note": ""}, {"w": "喫茶おじさん", "c": "1章 東銀座", "a": "銀座", "d": "タマゴサンド", "n": "喫茶アメリカン", "q": "喫茶アメリカン 銀座", "k": "高", "s": "unknown", "src": "https://senior-lifehack-lab.com/coffee_ojisan/", "note": ""}, {"w": "喫茶おじさん", "c": "1章 東銀座", "a": "銀座", "d": "キッシュとケーキ", "n": "銀座カフェーパウリスタ", "q": "カフェーパウリスタ 銀座", "k": "高", "s": "open", "src": "https://shosetsu-maru.com/yomimono/essay/kissaojisan", "note": "原田さんがエッセイで店名を挙げている"}, {"w": "喫茶おじさん", "c": "2章 新橋", "a": "ニュー新橋ビル", "d": "クリームソーダ", "n": "喫茶フジ", "q": "喫茶フジ 新橋", "k": "高", "s": "open", "src": "https://senior-lifehack-lab.com/coffee_ojisan/", "note": ""}, {"w": "喫茶おじさん", "c": "2章 新橋", "a": "ニュー新橋ビル", "d": "喫茶", "n": "カトレア（ニュー新橋ビル3F）", "q": "カトレア ニュー新橋ビル", "k": "中", "s": "unknown", "src": "https://ameblo.jp/shachigo26/entry-12832808934.html", "note": ""}, {"w": "喫茶おじさん", "c": "3章 学芸大学", "a": "学芸大学", "d": "クロックムッシュ・フレンチトースト", "n": "珈琲 平均律", "q": "平均律 学芸大学", "k": "高", "s": "open", "src": "https://senior-lifehack-lab.com/coffee_ojisan/", "note": ""}, {"w": "喫茶おじさん", "c": "3章 学芸大学", "a": "学芸大学", "d": "ミルフィーユ・ダミエ", "n": "マッターホーン", "q": "マッターホーン 学芸大学", "k": "高", "s": "open", "src": "https://matterhorn-tokyo.com/", "note": "2026年5月から火・水定休"}, {"w": "喫茶おじさん", "c": "4章 東京駅", "a": "東京駅", "d": "ビーフカツサンド", "n": "イノダコーヒ 東京大丸支店", "q": "イノダコーヒ 大丸東京", "k": "高", "s": "open", "src": "https://senior-lifehack-lab.com/coffee_ojisan/", "note": ""}, {"w": "喫茶おじさん", "c": "4章 東京駅", "a": "東京駅", "d": "あんみつ", "n": "TORAYA TOKYO（東京ステーションホテル）", "q": "TORAYA TOKYO 東京ステーションホテル", "k": "高", "s": "open", "src": "https://senior-lifehack-lab.com/coffee_ojisan/", "note": ""}, {"w": "喫茶おじさん", "c": "5章 アメ横", "a": "上野", "d": "ミートソース", "n": "珈琲 王城", "q": "珈琲王城 上野", "k": "高", "s": "open", "src": "https://senior-lifehack-lab.com/coffee_ojisan/", "note": ""}, {"w": "喫茶おじさん", "c": "5章 アメ横", "a": "アメ横", "d": "バターブレンドコーヒー", "n": "アメ横 ダンケ", "q": "ダンケ アメ横 上野", "k": "高", "s": "open", "src": "https://shosetsu-maru.com/yomimono/essay/kissaojisan", "note": "原田さんが小説を書くきっかけの店と明言"}, {"w": "喫茶おじさん", "c": "6章 渋谷", "a": "渋谷", "d": "ビーフサンド・シフォンケーキ", "n": "茶亭 羽當", "q": "茶亭羽當 渋谷", "k": "高", "s": "open", "src": "https://senior-lifehack-lab.com/coffee_ojisan/", "note": ""}, {"w": "喫茶おじさん", "c": "6章 渋谷", "a": "渋谷", "d": "ビーフカレー", "n": "トップス 西武渋谷店", "q": "", "k": "中", "s": "closed", "src": "https://senior-lifehack-lab.com/coffee_ojisan/", "note": "西武渋谷A・B館が2026年9月30日閉館。移転は未確認"}, {"w": "喫茶おじさん", "c": "7章 谷中", "a": "谷中", "d": "たまごサンド・レモンスカッシュ", "n": "カヤバ珈琲", "q": "カヤバ珈琲 谷中", "k": "高", "s": "open", "src": "https://senior-lifehack-lab.com/coffee_ojisan/", "note": ""}, {"w": "喫茶おじさん", "c": "7章 谷中", "a": "根津", "d": "スコーンのクリームティー", "n": "イングリッシュティーハウス ペコ", "q": "イングリッシュティーハウス ペコ 池之端", "k": "高", "s": "unknown", "src": "https://senior-lifehack-lab.com/coffee_ojisan/", "note": ""}, {"w": "喫茶おじさん", "c": "8章 新橋", "a": "新橋駅前ビル", "d": "ハンバーグセット・プリン", "n": "カフェテラス ポンヌフ", "q": "ポンヌフ 新橋駅前ビル", "k": "高", "s": "unknown", "src": "https://senior-lifehack-lab.com/coffee_ojisan/", "note": ""}, {"w": "喫茶おじさん", "c": "8章 新橋", "a": "新橋駅前ビル", "d": "プリンアラモード", "n": "パーラー キムラヤ", "q": "パーラーキムラヤ 新橋", "k": "高", "s": "unknown", "src": "https://senior-lifehack-lab.com/coffee_ojisan/", "note": ""}, {"w": "喫茶おじさん", "c": "9章 赤羽", "a": "赤羽", "d": "モーニング・バタートースト", "n": "純喫茶 デア", "q": "純喫茶デア 赤羽", "k": "高", "s": "open", "src": "https://senior-lifehack-lab.com/coffee_ojisan/", "note": ""}, {"w": "喫茶おじさん", "c": "9章 赤羽", "a": "赤羽", "d": "厚切りトースト", "n": "梅の木 本店", "q": "梅の木 赤羽 喫茶", "k": "高", "s": "open", "src": "https://senior-lifehack-lab.com/coffee_ojisan/", "note": ""}, {"w": "喫茶おじさん", "c": "9章 赤羽", "a": "赤羽", "d": "フルーツサンド・焼きそば", "n": "プチモンド 赤羽西口", "q": "", "k": "高", "s": "closed", "src": "https://senior-lifehack-lab.com/coffee_ojisan/", "note": "2025年12月31日閉店"}, {"w": "喫茶おじさん", "c": "10章 池袋", "a": "池袋", "d": "オムライス", "n": "珈琲専門館 伯爵 池袋北口店", "q": "珈琲専門館 伯爵 池袋北口店", "k": "高", "s": "open", "src": "https://senior-lifehack-lab.com/coffee_ojisan/", "note": "北口店か東口店かは未確定（夜10時の場面から北口店が有力）"}, {"w": "喫茶おじさん", "c": "10章 新宿", "a": "新宿三丁目", "d": "バナナクレープ", "n": "珈琲貴族エジンバラ", "q": "珈琲貴族エジンバラ 新宿", "k": "高", "s": "open", "src": "https://senior-lifehack-lab.com/coffee_ojisan/", "note": ""}, {"w": "喫茶おじさん", "c": "11章 京都", "a": "京都・河原町", "d": "ウインナー珈琲", "n": "築地", "q": "喫茶 築地 京都 河原町", "k": "高", "s": "unknown", "src": "https://senior-lifehack-lab.com/coffee_ojisan/", "note": ""}, {"w": "喫茶おじさん", "c": "11章 京都", "a": "京都・三条", "d": "ロールパンセット", "n": "イノダコーヒ 本店", "q": "イノダコーヒ 本店 京都", "k": "高", "s": "open", "src": "https://senior-lifehack-lab.com/coffee_ojisan/", "note": ""}, {"w": "喫茶おじさん", "c": "11章 京都", "a": "京都・中京区", "d": "たまごサンド", "n": "喫茶マドラグ", "q": "喫茶マドラグ 京都", "k": "高", "s": "open", "src": "https://senior-lifehack-lab.com/coffee_ojisan/", "note": ""}, {"w": "喫茶おじさん", "c": "12章 淡路町", "a": "神田須田町", "d": "アンプレス（あんバター）", "n": "珈琲ショパン", "q": "珈琲ショパン 淡路町", "k": "高", "s": "open", "src": "https://senior-lifehack-lab.com/coffee_ojisan/", "note": ""}, {"w": "古本食堂", "c": "第1話", "a": "神田小川町", "d": "笹巻けぬきすし", "n": "笹巻けぬきすし総本店", "q": "笹巻けぬきすし総本店", "k": "高", "s": "open", "src": "https://jazz-happylife.com/book/hika-harada-secondhand-book-cafe/", "note": ""}, {"w": "古本食堂", "c": "第2話", "a": "神保町", "d": "ビーフカレー", "n": "欧風カレー ボンディ 神保町本店", "q": "ボンディ 神保町本店", "k": "高", "s": "open", "src": "https://jazz-happylife.com/book/hika-harada-secondhand-book-cafe/", "note": ""}, {"w": "古本食堂", "c": "第3話", "a": "神保町", "d": "揚げたてピロシキ", "n": "ろしあ亭", "q": "", "k": "高", "s": "closed", "src": "https://san-tatsu.jp/news/270100/", "note": "2023年10月31日閉店"}, {"w": "古本食堂", "c": "第4話", "a": "神保町", "d": "カレーパン", "n": "ブックハウスカフェ", "q": "ブックハウスカフェ 神保町", "k": "高", "s": "open", "src": "https://jazz-happylife.com/book/hika-harada-secondhand-book-cafe/", "note": ""}, {"w": "古本食堂", "c": "第5話", "a": "神保町", "d": "上海式肉焼きそば", "n": "揚子江菜館", "q": "揚子江菜館 神保町", "k": "高", "s": "open", "src": "https://jazz-happylife.com/book/hika-harada-secondhand-book-cafe/", "note": ""}, {"w": "古本食堂", "c": "最終話", "a": "神保町", "d": "生ビール・メンチカツ", "n": "ビヤホール ランチョン", "q": "ランチョン 神保町", "k": "高", "s": "open", "src": "https://note.com/fe1955/n/n9c6a061c0f28", "note": ""}, {"w": "古本食堂", "c": "名前のみ", "a": "神保町", "d": "喫茶", "n": "ラドリオ", "q": "ラドリオ 神保町", "k": "中", "s": "open", "src": "https://dairoku126.exblog.jp/30490681/", "note": ""}, {"w": "古本食堂", "c": "名前のみ", "a": "神保町", "d": "喫茶", "n": "さぼうる2", "q": "さぼうる2 神保町", "k": "中", "s": "open", "src": "https://dairoku126.exblog.jp/30490681/", "note": ""}, {"w": "古本食堂", "c": "名前のみ？", "a": "神保町", "d": "スマトラカレー", "n": "共栄堂", "q": "共栄堂 神保町", "k": "低", "s": "open", "src": "https://etoilelab.com/book1/", "note": "登場しないとする読者もいる"}, {"w": "古本食堂", "c": "名前のみ？", "a": "神保町", "d": "カレー", "n": "エチオピア", "q": "エチオピア 神保町 カレー", "k": "低", "s": "open", "src": "https://etoilelab.com/book1/", "note": ""}, {"w": "古本食堂 新装開店", "c": "第1話", "a": "日本橋", "d": "お弁当", "n": "日本橋弁松総本店", "q": "日本橋弁松総本店", "k": "中", "s": "open", "src": "https://www.netgalley.jp/catalog/book/372788", "note": "作中は「日本で一番古いお弁当屋さん」。木挽町辨松（2020年廃業）とする読者も"}, {"w": "古本食堂 新装開店", "c": "第2話", "a": "神保町", "d": "天ぷら", "n": "天ぷら いもや", "q": "", "k": "高", "s": "closed", "src": "https://hizuki-writing.com/archives/3291", "note": "2018年閉店"}, {"w": "古本食堂 新装開店", "c": "第3話", "a": "神田小川町", "d": "豊前うどん（ごぼ天）", "n": "武膳 神田小川町店", "q": "武膳 神田小川町", "k": "中", "s": "open", "src": "https://note.com/hiitsumu/n/n05ce0b518753", "note": ""}, {"w": "古本食堂 新装開店", "c": "第4話", "a": "神保町", "d": "タイ料理", "n": "メナムのほとり 神保町本店", "q": "メナムのほとり 神保町", "k": "高", "s": "moved", "src": "https://hizuki-writing.com/archives/3291", "note": "神保町1-13-10へ移転して営業"}, {"w": "古本食堂 新装開店", "c": "第5話", "a": "神保町", "d": "鰻", "n": "なかや蒲焼店 神保町店", "q": "なかや蒲焼店 神保町", "k": "中", "s": "open", "src": "https://hizuki-writing.com/archives/3291", "note": ""}, {"w": "古本食堂 新装開店", "c": "最終話", "a": "神保町", "d": "中華風カレー", "n": "新世界菜館", "q": "新世界菜館 神保町", "k": "中", "s": "open", "src": "https://pooh70inu.hatenablog.com/entry/2024/10/29/", "note": ""}, {"w": "古本食堂 新装開店", "c": "最終話", "a": "京都", "d": "おばんざい", "n": "狐兎", "q": "狐兎 京都", "k": "低", "s": "unknown", "src": "https://www.netgalley.jp/catalog/book/372788", "note": "読者1人の記述のみ"}]</script>
+<script>
+const W = JSON.parse(document.getElementById('data').textContent);
+const WORKS = [...new Set(W.map(r=>r.w))];
+const WORKNOTE = {
+  "ランチ酒":"2017年・全16酒。店名は作中に出ません。",
+  "ランチ酒 おかわり日和":"2019年・全10酒。",
+  "ランチ酒 今日もまんぷく":"2021年・全16酒。読者による特定が少なく、推定が中心です。",
+  "あさ酒":"ランチ酒シリーズの新章・全12酒。",
+  "喫茶おじさん":"2023年・全12章。原田さんがエッセイで名前を挙げたのはパウリスタとダンケの2店です。",
+  "古本食堂":"2022年。神保町の店が実名で登場します。",
+  "古本食堂 新装開店":"2024年。"
+};
+const S = {open:"営業中",closed:"閉店",moved:"移転",unknown:"未確認",nodrink:"営業中（現在は酒類なし）"};
+const SCLS = {open:"s-open",closed:"s-closed",moved:"s-moved",unknown:"s-unknown",nodrink:"s-moved"};
+const AREAS=[
+ ["神保町・神田",/神保町|小川町|御茶ノ水|須田町|淡路町/],
+ ["銀座",/銀座/],
+ ["東京駅・日本橋",/東京駅|丸の内|日本橋/],
+ ["新橋・浜松町・赤坂",/新橋|浜松町|赤坂/],
+ ["築地・豊洲",/築地|豊洲/],
+ ["上野・谷中・秋葉原",/上野|アメ横|谷中|根津|稲荷町|末広町|秋葉原|日暮里/],
+ ["池袋・赤羽・十条",/池袋|赤羽|十条/],
+ ["新宿・新大久保・初台",/新宿|大久保|初台/],
+ ["中野・高円寺・荻窪",/中野|高円寺|荻窪/],
+ ["渋谷・表参道・代官山",/渋谷|表参道|代官山/],
+ ["六本木・麻布・広尾・恵比寿",/六本木|麻布|広尾|恵比寿/],
+ ["目黒・五反田周辺",/目黒|学芸大学|不動前|五反田|武蔵小山|池尻/],
+ ["蒲田・新丸子",/蒲田|新丸子/],
+ ["関東近郊",/御殿場|房総|秩父/],
+ ["京都",/京都/],
+ ["大阪",/大阪/],
+ ["広島",/広島/]
+];
+W.forEach(r=>{const m=AREAS.find(([,re])=>re.test(r.a));r.g=m?m[0]:"その他"});
+let selA = "すべて";
+let sel = "すべて";
+let saved = {};
+try{ saved = JSON.parse(localStorage.getItem('hh-filter')||'{}') }catch(e){}
+if (saved.sel && (saved.sel==="すべて"||WORKS.includes(saved.sel))) sel = saved.sel;
+if (saved.selA && (saved.selA==="すべて"||AREAS.some(a=>a[0]===saved.selA))) selA = saved.selA;
+const $ = id=>document.getElementById(id);
+$('hideClosed').checked = !!saved.hc; $('hideUnk').checked = !!saved.hu;
+
+function mapUrl(q){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q)}
+function esc(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+
+function chips(){
+  const all=["すべて",...WORKS];
+  $('chips').innerHTML = all.map(w=>{
+    const n = w==="すべて"?W.length:W.filter(r=>r.w===w).length;
+    return `<button class="chip" aria-pressed="${w===sel}" data-w="${esc(w)}">${esc(w)} <span class="c">${n}</span></button>`
+  }).join('');
+  const base=W.filter(r=>sel==="すべて"||r.w===sel);
+  const names=["すべて",...AREAS.map(a=>a[0])];
+  $('areas').innerHTML = names.map(a=>{
+    const n = a==="すべて"?base.length:base.filter(r=>r.g===a).length;
+    if(n===0&&a!==selA) return '';
+    return `<button class="chip" aria-pressed="${a===selA}" data-a="${esc(a)}">${esc(a)} <span class="c">${n}</span></button>`
+  }).join('');
+  $('pvW').textContent=sel; $('pvA').textContent=selA;
+  $('pkW').classList.toggle('on',sel!=="すべて"); $('pkA').classList.toggle('on',selA!=="すべて");
+}
+let lastFocus=null;
+function openSheet(kind){
+  const base = kind==='w'? W : W.filter(r=>sel==="すべて"||r.w===sel);
+  const names = kind==='w'? ["すべて",...WORKS] : ["すべて",...AREAS.map(a=>a[0])];
+  const cur = kind==='w'?sel:selA;
+  const items = names.map(n=>({n,c:n==="すべて"?base.length:base.filter(r=>(kind==='w'?r.w:r.g)===n).length})).filter(o=>o.c>0||o.n===cur);
+  $('sheetT').textContent = kind==='w'?'作品を選ぶ':'エリアを選ぶ';
+  $('sheetGrid').innerHTML = items.map(o=>`<button type="button" class="opt" data-k="${kind}" data-v="${esc(o.n)}" aria-pressed="${o.n===cur}"><span>${esc(o.n)}</span><b>${o.c}</b></button>`).join('');
+  lastFocus=document.activeElement; $('sheet').hidden=false; document.body.style.overflow='hidden';
+  const f=$('sheetGrid').querySelector('[aria-pressed="true"]'); if(f) f.focus();
+}
+function closeSheet(){ $('sheet').hidden=true; document.body.style.overflow=''; if(lastFocus) lastFocus.focus(); }
+function stats(){
+  const named=W.filter(r=>r.q).length, closed=W.filter(r=>r.s==='closed').length;
+  const uniq=new Set(W.filter(r=>r.q).map(r=>r.q)).size;
+  $('stats').innerHTML = `<div><b>${uniq}</b>店</div><div><b>${WORKS.length}</b>作品</div><div><b>${W.length}</b>場面</div>`;
+  const YEAR={"ランチ酒":2017,"ランチ酒 おかわり日和":2019,"ランチ酒 今日もまんぷく":2021,"あさ酒":2024,"喫茶おじさん":2023,"古本食堂":2022,"古本食堂 新装開店":2024};
+  $('menu').innerHTML = '<li class="menu-h" aria-hidden="true">お品書き</li>'+WORKS.map(w=>{const n=W.filter(r=>r.w===w&&r.q).length;return `<li><button type="button" data-w="${esc(w)}"><span class="t">${esc(w)}</span><span class="y">${YEAR[w]||''}</span><span class="dots"></span><span class="n">${n}<small>店</small></span></button></li>`}).join('');
+}
+function render(){
+  const q=$('q').value.trim().toLowerCase(), hc=$('hideClosed').checked, hu=$('hideUnk').checked;
+  try{localStorage.setItem('hh-filter',JSON.stringify({sel,selA,hc,hu}))}catch(e){}
+  const rows=W.filter(r=>(sel==="すべて"||r.w===sel)&&(selA==="すべて"||r.g===selA)&&(!hc||r.s!=='closed')&&(!hu||r.q)&&(!q||[r.n,r.a,r.g,r.d,r.c,r.note].join(' ').toLowerCase().includes(q)));
+  if(!rows.length){$('out').innerHTML='<p class="empty">条件に合う店はありません。検索語や絞り込みを変えてください。</p>';return}
+  const groups=WORKS.filter(w=>rows.some(r=>r.w===w));
+  $('out').innerHTML = groups.map(w=>{
+    const rs=rows.filter(r=>r.w===w);
+    return `<section class="work"><h2>${esc(w)}<small>${rs.length}件</small></h2>${WORKNOTE[w]?`<p class="worknote">${esc(WORKNOTE[w])}</p>`:''}<ol class="list">${rs.map(r=>`
+      <li class="item">
+        <div class="ch">${esc(r.c)}</div>
+        <div class="main">
+          <div class="dish">${esc(r.d)}</div>
+          <div class="shop"><span class="area">${esc(r.a)}</span><span class="name${r.q?'':' unk'}">${esc(r.n)}</span></div>
+          ${r.note?`<div class="note">${esc(r.note)}</div>`:''}
+          <div class="tags">${r.k?`<span class="tag k-${r.k}">確度 ${r.k}</span>`:''}${r.s&&r.s!=='unknown'?`<span class="tag ${SCLS[r.s]}">${S[r.s]}</span>`:''}</div>
+        </div>
+        <div class="act">${r.q?`<a class="map" href="${mapUrl(r.q)}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>地図・写真・口コミ</a>`:'<span class="nomap">地図なし</span>'}${r.src?`<a class="src" href="${esc(r.src)}" target="_blank" rel="noopener">出典</a>`:''}</div>
+      </li>`).join('')}</ol></section>`
+  }).join('');
+}
+$('chips').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;sel=b.dataset.w;chips();render()});
+$('areas').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;selA=b.dataset.a;chips();render()});
+$('pkW').addEventListener('click',()=>openSheet('w'));
+$('pkA').addEventListener('click',()=>openSheet('a'));
+$('sheet').addEventListener('click',e=>{
+  if(e.target.closest('[data-close]')){closeSheet();return}
+  const o=e.target.closest('.opt'); if(!o) return;
+  if(o.dataset.k==='w') sel=o.dataset.v; else selA=o.dataset.v;
+  chips(); render(); closeSheet();
+  document.querySelector('.controls').scrollIntoView({block:'start'});
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('sheet').hidden)closeSheet()});
+['q','hideClosed','hideUnk'].forEach(id=>$(id).addEventListener('input',render));
+$('nofound').textContent = "三人屋／サンドの女／図書館のお夜食／三千円の使いかた／財布は踊る／口福のレシピ／まずはこれ食べて／定食屋「雑」／東京ロンダリング／一橋桐子の犯罪日記・相談日記／老人ホテル／月収／#台所のあるところ／母親からの小包はなぜこんなにダサいのか／そのマンション、終の住処でいいですか？／ラジオ・ガガガ／DRY／彼女の家計簿／ミチルさん、今日も上機嫌 ほか。いずれも架空の店のみか、店名の分かる記述が見つかりませんでした（読書ブログ・書評・インタビューの範囲で確認）。";
+$('menu').addEventListener('click',e=>{const b=e.target.closest('button[data-w]');if(!b)return;sel=b.dataset.w;chips();render();document.querySelector('.controls').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})});
+const ctrl=document.querySelector('.controls');
+function setH(){document.documentElement.style.setProperty('--ctrl-h',ctrl.offsetHeight+'px')}
+try{new ResizeObserver(setH).observe(ctrl)}catch(e){addEventListener('resize',setH)}
+chips();stats();render();setH();
+</script>
+
+<script>if('serviceWorker' in navigator){addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))}</script>
+</body>
+</html>
